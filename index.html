@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My QRCode</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.3.2/qrcode.js"></script>
 </head>
+<main>
+    <div id = "qrcode"></div>
+</main>
 <body>
     <p>This is my QRCode</p>
 
-    <script>const QrCode = require('qrcode')
+    <script>
+    const QrCode = require('qrcode')
 
         let data = 
         [
@@ -23,8 +28,7 @@
         ]
         
         let in_string = JSON.stringify(data)
-        
-        QrCode.toString(in_string,{type:"terminal"},function (err, QrCode){console.log(QrCode)})
+        var qrcode = new QRCode("qrcode", in_string);
         </script>
 </body>
 </html>
