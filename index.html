@@ -5,9 +5,6 @@
     <title>My QRCode</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.0.0/qrcode.js"></script>
 </head>
-<main>
-    <div id = "qrcode"></div>
-</main>
 <body>
     <main>
         <div id = "qrcode"></div>
@@ -27,7 +24,7 @@
                 name:"Orange",
                 Price:"100",
             }
-        ]
+        ];
         
         let in_string = JSON.stringify(data)
         var qrcode = new QRCode("qrcode", in_string);
