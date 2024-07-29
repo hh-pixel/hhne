@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My QRCode</title>
+</head>
+<body>
+    <p>This is my QRCode</p>
+
+    <script>const QrCode = require('qrcode')
+
+        let data = 
+        [
+            {
+                name:"Mango",
+                Price: 500,
+            },
+            {
+                name:"Orange",
+                Price:"100",
+            }
+        ]
+        
+        let in_string = JSON.stringify(data)
+        
+        QrCode.toString(in_string,{type:"terminal"},function (err, QrCode){console.log(QrCode)})
+        </script>
+</body>
+</html>
